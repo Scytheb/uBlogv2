@@ -1,0 +1,61 @@
+body{
+	background: #121212 url("../images/background.jpg") no-repeat top left;
+    font-family: helvetica, sans-serif;
+    color: #eeeeee;
+}
+.header{
+	width: 1200px;
+	margin: auto;
+	text-align: justify;
+	background-color: #44657E;
+	border:1px solid black;
+}
+.header a{
+	color: #74b65f;
+	font-size:22px;
+	padding: 0px 130px 10px 20px;
+}
+h1{
+	font-size:36px;
+	padding:15px 15px;
+}
+#box{
+	width: 1080px;
+	height:900px;
+	padding:50px;
+	margin: auto;
+	background-color: #646D7E;
+	border:1px solid black;
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+.container{
+	position: relative;
+	bottom:1000px;
+	width: 1080px;
+	padding:50px;
+	margin: auto;
+	text-align: justify;
+}
+.post{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dddddd;
+}
+h3{
+	color: #ffffff;
+	text-align:left;
+	margin: 0px 10px;
+}
+.date{
+	text-align:left;
+	margin: 0px 17px;
+	color: #eeeeee;
+}
+a{
+	text-decoration: none;
+	color: #202636;
+}
+label,input{
+margin: 7px 0px;
+}
