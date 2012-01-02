@@ -1,8 +1,8 @@
 <?php
 	global $settings;
     $settings = require( 'settings.php' );
-	require_once "models/db.php";
-    require_once "models/user.php";
+	require "models/db.php";
+    require "models/user.php";
     //$user = getCurrentUser();
     //$redpage = 'register';
 	//$redpage='conpost';
@@ -22,5 +22,4 @@
     }*/
  
 	require "controllers/{$redpage}.php";
-
 ?>

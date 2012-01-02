@@ -1,11 +1,7 @@
 <?php 
-	global $settings;
-    $settings = require( '/settings.php' );
-	require_once "/models/db.php";
 	include "/models/blog.php";
 	include "/views/header.php";
 	
-
 	if (isset($_GET['page'])) {
 		$page=$_GET['page'];
 		$blog=allBlogPosts($page*10-10, $page*10, 'blogdate');

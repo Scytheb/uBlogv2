@@ -58,7 +58,7 @@ $passwordHash = hash("sha1", $password );
 
 $exists = mysql_query(
 "SELECT
-loginid
+userid
 FROM
 login
 WHERE
@@ -77,47 +77,19 @@ VALUES
 ");
 
 
-$loginId = mysql_query(
-"SELECT
-loginid
-FROM
-login
-WHERE
-username = '$name'
-");
+$userid = mysql_insert_id();
 
 $insertToUser = mysql_query(
 "INSERT INTO
-user ( loginid, email )
+user ( userid, email )
 VALUES
-( '$loginId', '$email' )
+( '$userid', '$email' )
 ");
 
-if( !isset($insertToLogin)
-|| !isset($insertToUser)
-|| !isset($loginId) ){
-         //If something went wrong, delete added records, just in case.
-         //Basically maybe it doesn't work really well, what if duplicate username???
-mysql_query(
-"DELETE FROM
-login
-WHERE
-loginid = '$loginId'
-");
-
-mysql_query(
-"DELETE FROM
-user
-WHERE
-loginid = '$loginId'
-");
-
-die( "MySQL error during register" );
-}
          return array(
 //mysql_insert_id return last auto-incremented value from last query
 //in this case, userid from table user
-             "userid" => mysql_insert_id(),
+             "userid" => $userid,
              "username" => $name
          );
      }

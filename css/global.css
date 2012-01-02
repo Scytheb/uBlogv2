@@ -1,5 +1,5 @@
 body{
-	background: #121212 url("../images/background.jpg") no-repeat top left;
+	background: #121212 url("../images/background.jpg") repeat top left;
     font-family: helvetica, sans-serif;
     color: #eeeeee;
 }
@@ -7,7 +7,8 @@ body{
 	width: 1200px;
 	margin: auto;
 	text-align: justify;
-	background-color: #44657E;
+	font-size:16px;
+	background-color: #33536c;
 	border:1px solid black;
 }
 .header a{
@@ -19,23 +20,26 @@ h1{
 	font-size:36px;
 	padding:15px 15px;
 }
+/*
 #box{
+	position: absolute;
+	top:280px;
 	width: 1080px;
-	height:900px;
+	height:1280px;
 	padding:50px;
 	margin: auto;
 	background-color: #646D7E;
 	border:1px solid black;
 	opacity:0.6;
-	filter:alpha(opacity=60); /* For IE8 and earlier */
+	filter:alpha(opacity=60); // For IE8 and stupider
 }
+*/
 .container{
-	position: relative;
-	bottom:1000px;
 	width: 1080px;
 	padding:50px;
 	margin: auto;
 	text-align: justify;
+	background-color: #35393E;
 }
 .post{
 	border-style: solid;
@@ -52,10 +56,18 @@ h3{
 	margin: 0px 17px;
 	color: #eeeeee;
 }
+
 a{
 	text-decoration: none;
-	color: #202636;
+	color: #bbccff;
 }
+
 label,input{
 margin: 7px 0px;
+}
+#newpost{
+
+}
+#newpost h3{
+	font-size:22px;
 }

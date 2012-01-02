@@ -1,9 +1,23 @@
-<h2>Your Blog!</h2>
+<div id="newpost">
+<h3>New Post</h3>
+<form method="post" action="index.php?redpage=conpost">
 
+	<div>
+		<label for='text'>Post Title</label>
+        <input type="text" name="title" />
+    </div>
+    <div>
+        <textarea rows="10" cols="120" name="text"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Υποβολή" />
+    </div>
+</form>
+</div>
 <?php
 	while($row = mysql_fetch_array($result)){
 		$t0=$row['title'];
-		$t1=$row['stuff'];
+		$t1=substr($row['stuff'],0,150);
 		$t2=$row['image'];
 		$t3=$row['blogdate'];
 		echo"<div class='post'>";
@@ -15,19 +29,3 @@
 		";
 	}
 ?>
-<h3>New Post</h3>
-<form method="post" action="models/doposting.php">
-
-	<div>
-        <input type="text" name="title" />
-    </div>
-    <div>
-        <textarea name="text"></textarea>
-    </div>
-    <div>
-        <input type="submit" value="Υποβολή" />
-    </div>
-	<div>
-        <input type="hidden" name="page" value="doposting" />
-    </div>
-</form>
